@@ -6,7 +6,7 @@ const model = require("../services/gemini");
 //   "prompt": "Write 3 practical tips for staying productive while working from home."
 // }
 
-const generateText1 = async (req, res) => {
+const generateAi = async (req, res) => {
     const { prompt } = req.body || {};
 
     if (!prompt) {
@@ -21,4 +21,4 @@ const generateText1 = async (req, res) => {
     }
 }
 
-module.exports = generateText1;
+module.exports = generateAi;
