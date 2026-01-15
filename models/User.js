@@ -9,18 +9,26 @@
      name: {
      type: String,
      required: true,
+     minlength: [2],
+     trim: true
      },
      email: {
      type: String,
      required: true,
+     unique: true,
+     lowercase: true
      },
      age: {
      type: Number,
      required: true,
+     min: 16
      },
      role: {
      type: String,
-     required: true,
+     enum: {
+        values: ["student", "admin"]
+     },
+     default: "student"
      },
  },
  { timestamps: true  }

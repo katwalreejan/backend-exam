@@ -30,14 +30,14 @@ const getCarById = async (req, res) => {
   }
 
   try {
-    const car = await User.findById(carId);
+    const car = await Car.findById(carId);
     if (car) {
       res.status(200).json(car);
     } else {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: "Car not found" });
     }
   } catch (error) {
-    res.status(500).json({ message: "Failed to retrieve user" });
+    res.status(500).json({ message: "Failed to retrieve car" });
   }
 };
 

@@ -3,6 +3,7 @@ require('dotenv').config();
 const app = express();
 const userRoutes = require("./routes/userRoutes");
 const carRoutes = require("./routes/carRoutes");
+const aiRoutes = require("./routes/aiRoutes");
 const connectDB = require("./config/db");
 connectDB();
 
@@ -17,6 +18,7 @@ app.use("/api/users", userRoutes);
 
 
 app.use("/api/cars", carRoutes);
+app.use("/api/ai", aiRoutes)
 
 
 
